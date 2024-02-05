@@ -1,0 +1,33 @@
+# Replace <account-id> with the account id for the account in which this policy is created
+# this policy is for Oprator access who can only access cloudwatch log data 
+
+
+
+
+
+
+{
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": [
+                    "logs:CreateLogStream",
+                    "logs:DescribeLogStreams",
+                    "logs:PutLogEvents",
+                    "logs:GetLogEvents"
+                ],
+                "Effect": "Allow",
+                "Resource": "arn:aws:logs:us-east-1:<account-id>:log-group:OperationsLogGroup:*"
+            },
+            {
+                "Action": [
+                    "logs:DescribeLogGroups"
+                ],
+                "Effect": "Allow",
+                "Resource": "arn:aws:logs:us-east-1:<account-id>:log-group::log-stream:*"
+            }
+        ]
+    }
+
+
+    

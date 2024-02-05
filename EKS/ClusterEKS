@@ -1,0 +1,24 @@
+#get ARN of AWS Managed AdministratorAccess policy 
+aws iam list-policies --query 'Policies[?PolicyName==`AdministratorAccess`].{ARN:Arn}' --output text --profile pmgrnd
+
+# now store ARN to any variable using belwo command
+export EKSARN=$(aws iam list-policies --query 'Policies[?PolicyName==`AdministratorAccess`].{ARN:Arn}' --output text --profile pmgrnd)
+
+# now lets craete EKS Admin group
+aws iam create-group --group-name EKS-Admins --profile pmgrnd
+
+# now attach administrator group policy to EKS admin group
+aws iam attach-group-policy --policy-arn $EKSARN --group-name EKS-Admins --profile pmgrnd
+
+#create eksadmin user and add it to EKS admin group
+aws iam create-user --user-name <username> --profile pmgrnd
+aws iam add-user-to-group --user-name <username> --group-name EKS-Admins --profile pmgrnd
+
+#set password for eksadmin
+aws iam create-login-profile --user-name <username> --password <Password> --password-reset-required --profile pmgrnd
+
+#create Access keys
+aws iam create-access-key --user-name <username> --profile pmgrnd
+
+
+

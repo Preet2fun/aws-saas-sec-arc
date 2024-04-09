@@ -20,5 +20,8 @@ aws iam create-login-profile --user-name <username> --password <Password> --pass
 #create Access keys
 aws iam create-access-key --user-name <username> --profile pmgrnd
 
+#create access entry
+aws eks create-access-entry --cluster-name demo-eks --principal-arn arn:aws:iam::779316103690:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_AWSPowerUserAccess_a815268961a13145
+
 
 

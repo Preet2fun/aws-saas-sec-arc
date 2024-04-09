@@ -1,0 +1,10 @@
+eksctl create iamserviceaccount  --name <name> --namespace kube-system --cluster <name>  --override-existing-serviceaccounts--attach-policy-arn arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy  --approve --role-name <RoleName> --role-only --region us-east-1
+
+
+eksctl create addon --name aws-ebs-csi-driver --cluster <ClusterName>  --service-account-role-arn arn:aws:iam::<AccountNumber>:role/AmazonEKS_EBS_CSI_DriverRole --force --region us-east-1   
+
+
+aws eks describe-cluster --name <Name> --query "cluster.identity.oidc.issuer" --output text
+
+
+ eksctl create iamserviceaccount --cluster <Name> --namespace appmesh-system --name appmesh-controller --attach-policy-arn  arn:aws:iam::aws:policy/AWSCloudMapFullAccess, arn:aws:iam::aws:policy/AWSAppMeshFullAccess --override-existing-serviceaccounts --approve

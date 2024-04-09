@@ -1,0 +1,506 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "eks-pod-identity-agent-79tzm",
+    "generateName": "eks-pod-identity-agent-",
+    "namespace": "kube-system",
+    "uid": "3a75367d-1548-4ccb-8a99-75e518d43b1c",
+    "resourceVersion": "3219",
+    "creationTimestamp": "2024-02-15T07:34:17Z",
+    "labels": {
+      "app.kubernetes.io/instance": "eks-pod-identity-agent",
+      "app.kubernetes.io/name": "eks-pod-identity-agent",
+      "controller-revision-hash": "5c74b8766b",
+      "pod-template-generation": "1"
+    },
+    "ownerReferences": [
+      {
+        "apiVersion": "apps/v1",
+        "kind": "DaemonSet",
+        "name": "eks-pod-identity-agent",
+        "uid": "099660d7-5c1f-43f4-8957-370e9ee0fa64",
+        "controller": true,
+        "blockOwnerDeletion": true
+      }
+    ],
+    "managedFields": [
+      {
+        "manager": "kube-controller-manager",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-02-15T07:34:17Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:generateName": {},
+            "f:labels": {
+              ".": {},
+              "f:app.kubernetes.io/instance": {},
+              "f:app.kubernetes.io/name": {},
+              "f:controller-revision-hash": {},
+              "f:pod-template-generation": {}
+            },
+            "f:ownerReferences": {
+              ".": {},
+              "k:{\"uid\":\"099660d7-5c1f-43f4-8957-370e9ee0fa64\"}": {}
+            }
+          },
+          "f:spec": {
+            "f:affinity": {
+              ".": {},
+              "f:nodeAffinity": {
+                ".": {},
+                "f:requiredDuringSchedulingIgnoredDuringExecution": {}
+              }
+            },
+            "f:containers": {
+              "k:{\"name\":\"eks-pod-identity-agent\"}": {
+                ".": {},
+                "f:args": {},
+                "f:command": {},
+                "f:env": {
+                  ".": {},
+                  "k:{\"name\":\"AWS_REGION\"}": {
+                    ".": {},
+                    "f:name": {},
+                    "f:value": {}
+                  }
+                },
+                "f:image": {},
+                "f:imagePullPolicy": {},
+                "f:livenessProbe": {
+                  ".": {},
+                  "f:failureThreshold": {},
+                  "f:httpGet": {
+                    ".": {},
+                    "f:host": {},
+                    "f:path": {},
+                    "f:port": {},
+                    "f:scheme": {}
+                  },
+                  "f:initialDelaySeconds": {},
+                  "f:periodSeconds": {},
+                  "f:successThreshold": {},
+                  "f:timeoutSeconds": {}
+                },
+                "f:name": {},
+                "f:ports": {
+                  ".": {},
+                  "k:{\"containerPort\":80,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:containerPort": {},
+                    "f:hostPort": {},
+                    "f:name": {},
+                    "f:protocol": {}
+                  },
+                  "k:{\"containerPort\":2703,\"protocol\":\"TCP\"}": {
+                    ".": {},
+                    "f:containerPort": {},
+                    "f:hostPort": {},
+                    "f:name": {},
+                    "f:protocol": {}
+                  }
+                },
+                "f:readinessProbe": {
+                  ".": {},
+                  "f:failureThreshold": {},
+                  "f:httpGet": {
+                    ".": {},
+                    "f:host": {},
+                    "f:path": {},
+                    "f:port": {},
+                    "f:scheme": {}
+                  },
+                  "f:initialDelaySeconds": {},
+                  "f:periodSeconds": {},
+                  "f:successThreshold": {},
+                  "f:timeoutSeconds": {}
+                },
+                "f:resources": {},
+                "f:securityContext": {
+                  ".": {},
+                  "f:capabilities": {
+                    ".": {},
+                    "f:add": {}
+                  }
+                },
+                "f:terminationMessagePath": {},
+                "f:terminationMessagePolicy": {}
+              }
+            },
+            "f:dnsPolicy": {},
+            "f:enableServiceLinks": {},
+            "f:hostNetwork": {},
+            "f:initContainers": {
+              ".": {},
+              "k:{\"name\":\"eks-pod-identity-agent-init\"}": {
+                ".": {},
+                "f:command": {},
+                "f:image": {},
+                "f:imagePullPolicy": {},
+                "f:name": {},
+                "f:resources": {},
+                "f:securityContext": {
+                  ".": {},
+                  "f:privileged": {}
+                },
+                "f:terminationMessagePath": {},
+                "f:terminationMessagePolicy": {}
+              }
+            },
+            "f:priorityClassName": {},
+            "f:restartPolicy": {},
+            "f:schedulerName": {},
+            "f:securityContext": {},
+            "f:terminationGracePeriodSeconds": {},
+            "f:tolerations": {}
+          }
+        }
+      },
+      {
+        "manager": "kubelet",
+        "operation": "Update",
+        "apiVersion": "v1",
+        "time": "2024-02-15T07:34:25Z",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:status": {
+            "f:conditions": {
+              "k:{\"type\":\"ContainersReady\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Initialized\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              },
+              "k:{\"type\":\"Ready\"}": {
+                ".": {},
+                "f:lastProbeTime": {},
+                "f:lastTransitionTime": {},
+                "f:status": {},
+                "f:type": {}
+              }
+            },
+            "f:containerStatuses": {},
+            "f:hostIP": {},
+            "f:initContainerStatuses": {},
+            "f:phase": {},
+            "f:podIP": {},
+            "f:podIPs": {
+              ".": {},
+              "k:{\"ip\":\"192.168.228.93\"}": {
+                ".": {},
+                "f:ip": {}
+              }
+            },
+            "f:startTime": {}
+          }
+        },
+        "subresource": "status"
+      }
+    ]
+  },
+  "spec": {
+    "volumes": [
+      {
+        "name": "kube-api-access-s6lw6",
+        "projected": {
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "name": "kube-root-ca.crt",
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ]
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "path": "namespace",
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "defaultMode": 420
+        }
+      }
+    ],
+    "initContainers": [
+      {
+        "name": "eks-pod-identity-agent-init",
+        "image": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:0.1.3",
+        "command": [
+          "/go-runner",
+          "/eks-pod-identity-agent",
+          "initialize"
+        ],
+        "resources": {},
+        "volumeMounts": [
+          {
+            "name": "kube-api-access-s6lw6",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "Always",
+        "securityContext": {
+          "privileged": true
+        }
+      }
+    ],
+    "containers": [
+      {
+        "name": "eks-pod-identity-agent",
+        "image": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:0.1.3",
+        "command": [
+          "/go-runner",
+          "/eks-pod-identity-agent",
+          "server"
+        ],
+        "args": [
+          "--port",
+          "80",
+          "--cluster-name",
+          "demo-eks",
+          "--probe-port",
+          "2703"
+        ],
+        "ports": [
+          {
+            "name": "proxy",
+            "hostPort": 80,
+            "containerPort": 80,
+            "protocol": "TCP"
+          },
+          {
+            "name": "probes-port",
+            "hostPort": 2703,
+            "containerPort": 2703,
+            "protocol": "TCP"
+          }
+        ],
+        "env": [
+          {
+            "name": "AWS_REGION",
+            "value": "us-east-1"
+          }
+        ],
+        "resources": {},
+        "volumeMounts": [
+          {
+            "name": "kube-api-access-s6lw6",
+            "readOnly": true,
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+          }
+        ],
+        "livenessProbe": {
+          "httpGet": {
+            "path": "/healthz",
+            "port": "probes-port",
+            "host": "localhost",
+            "scheme": "HTTP"
+          },
+          "initialDelaySeconds": 30,
+          "timeoutSeconds": 10,
+          "periodSeconds": 10,
+          "successThreshold": 1,
+          "failureThreshold": 3
+        },
+        "readinessProbe": {
+          "httpGet": {
+            "path": "/readyz",
+            "port": "probes-port",
+            "host": "localhost",
+            "scheme": "HTTP"
+          },
+          "initialDelaySeconds": 1,
+          "timeoutSeconds": 10,
+          "periodSeconds": 10,
+          "successThreshold": 1,
+          "failureThreshold": 30
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "imagePullPolicy": "Always",
+        "securityContext": {
+          "capabilities": {
+            "add": [
+              "CAP_NET_BIND_SERVICE"
+            ]
+          }
+        }
+      }
+    ],
+    "restartPolicy": "Always",
+    "terminationGracePeriodSeconds": 30,
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccountName": "default",
+    "serviceAccount": "default",
+    "nodeName": "ip-192-168-228-93.ec2.internal",
+    "hostNetwork": true,
+    "securityContext": {},
+    "affinity": {
+      "nodeAffinity": {
+        "requiredDuringSchedulingIgnoredDuringExecution": {
+          "nodeSelectorTerms": [
+            {
+              "matchFields": [
+                {
+                  "key": "metadata.name",
+                  "operator": "In",
+                  "values": [
+                    "ip-192-168-228-93.ec2.internal"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "schedulerName": "default-scheduler",
+    "tolerations": [
+      {
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "effect": "NoExecute"
+      },
+      {
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "effect": "NoExecute"
+      },
+      {
+        "key": "node.kubernetes.io/disk-pressure",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      },
+      {
+        "key": "node.kubernetes.io/memory-pressure",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      },
+      {
+        "key": "node.kubernetes.io/pid-pressure",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      },
+      {
+        "key": "node.kubernetes.io/unschedulable",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      },
+      {
+        "key": "node.kubernetes.io/network-unavailable",
+        "operator": "Exists",
+        "effect": "NoSchedule"
+      }
+    ],
+    "priorityClassName": "system-node-critical",
+    "priority": 2000001000,
+    "enableServiceLinks": true,
+    "preemptionPolicy": "PreemptLowerPriority"
+  },
+  "status": {
+    "phase": "Running",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-02-15T07:34:24Z"
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-02-15T07:34:25Z"
+      },
+      {
+        "type": "ContainersReady",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-02-15T07:34:25Z"
+      },
+      {
+        "type": "PodScheduled",
+        "status": "True",
+        "lastProbeTime": null,
+        "lastTransitionTime": "2024-02-15T07:34:17Z"
+      }
+    ],
+    "hostIP": "192.168.228.93",
+    "podIP": "192.168.228.93",
+    "podIPs": [
+      {
+        "ip": "192.168.228.93"
+      }
+    ],
+    "startTime": "2024-02-15T07:34:17Z",
+    "initContainerStatuses": [
+      {
+        "name": "eks-pod-identity-agent-init",
+        "state": {
+          "terminated": {
+            "exitCode": 0,
+            "reason": "Completed",
+            "startedAt": "2024-02-15T07:34:20Z",
+            "finishedAt": "2024-02-15T07:34:20Z",
+            "containerID": "containerd://83b38798cac6e0e9ea3e169155821700fab756b04d704e4bdf84f7b2f42051a7"
+          }
+        },
+        "lastState": {},
+        "ready": true,
+        "restartCount": 0,
+        "image": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:0.1.3",
+        "imageID": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent@sha256:2973323796173309f25cbab8c1c77cc6993eb686763c5d1a2f16feef6c56163b",
+        "containerID": "containerd://83b38798cac6e0e9ea3e169155821700fab756b04d704e4bdf84f7b2f42051a7",
+        "started": false
+      }
+    ],
+    "containerStatuses": [
+      {
+        "name": "eks-pod-identity-agent",
+        "state": {
+          "running": {
+            "startedAt": "2024-02-15T07:34:24Z"
+          }
+        },
+        "lastState": {},
+        "ready": true,
+        "restartCount": 0,
+        "image": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent:0.1.3",
+        "imageID": "602401143452.dkr.ecr.us-east-1.amazonaws.com/eks/eks-pod-identity-agent@sha256:2973323796173309f25cbab8c1c77cc6993eb686763c5d1a2f16feef6c56163b",
+        "containerID": "containerd://03213ceeaeb122c67d2b4957240331b1e6298158371c1fb03683e16c352da826",
+        "started": true
+      }
+    ],
+    "qosClass": "BestEffort"
+  }
+}
